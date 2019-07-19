@@ -1,0 +1,43 @@
+<!--
+  code tested in CHROME version 75.0.3770.100. 
+  Launch chrome with flag --allow-file-access-from-files
+ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <style>
+      li.item {
+        list-style: none;
+        padding: 5px;
+      }
+    </style>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="demo">
+      <h2>First Load the text in text area</h2>
+      <button type="button" onclick="loadDoc()">Load Text</button>
+      <button type="button" onclick="CountWords()">Count Words</button>
+      <span id="divWordCount"></span>
+    </div>
+    <div>
+      <textarea id="txtBigText" style="width: 1300px; height: 300px;">
+      </textarea>
+    </div>
+    <!--
+		<table>
+			<tr>
+				<td><textarea id="txtWordStat" style="width: 200px; height: 300px;"></textarea></td>
+				<td><textarea id="txtWordAnalysis" style="width: 200px; height: 300px;"></textarea></td>
+			</tr>
+		</table>
+	-->
+    <div id="renderList">
+      <div>Analysis of Top 10 words by occurence</div>
+      <ul style="border:1px solid black" id="wordList"></ul>
+    </div>
+  </body>
+</html>
