@@ -75,7 +75,7 @@ function CountWords() {
   // }
   // document.getElementById("txtWordStat").value = wordStats;
   let wcount = MAX_WORDS_TO_FETCH;
-  if(wcount < sortedArray.length)
+  if(wcount > sortedArray.length)
       wcount = sortedArray.length;
   
   for (let i = 0; i < wcount; ++i) {
