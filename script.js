@@ -63,7 +63,7 @@ function CountWords() {
       total: wd_map[w]
     };
   });
-
+  //sort the array in descending order
   sortedArray.sort(function(a, b) {
     return b.total - a.total;
   });
@@ -74,8 +74,11 @@ function CountWords() {
   //   wordStats += sortedArray[i].name + ":" + sortedArray[i].total + "\n";
   // }
   // document.getElementById("txtWordStat").value = wordStats;
-
-  for (let i = 0; i < MAX_WORDS_TO_FETCH; ++i) {
+  let wcount = MAX_WORDS_TO_FETCH;
+  if(wcount < sortedArray.length)
+      wcount = sortedArray.length;
+  
+  for (let i = 0; i < wcount; ++i) {
     getWordAnalysis(sortedArray[i].name, sortedArray[i].total);
   }
 }
